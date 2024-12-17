@@ -1,11 +1,11 @@
-import { IsString, MinLength } from 'class-validator';
+import { IsString, min, MinLength} from 'class-validator';
 
 export class CreateTaskDto {
   @IsString()
-  @MinLength(4)
+  @MinLength(1)
   title: string;
 
-  @MinLength(10)
   @IsString()
+  @MinLength(1)
   description: string;
 }
